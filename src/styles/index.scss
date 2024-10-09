@@ -1,0 +1,9 @@
+@import './header';
+@import './footer';
+@import './variables';
+
+body {
+    margin: 0 100px;
+    font-family: $primary-font;
+    font-size: $base-font-size;
+}
