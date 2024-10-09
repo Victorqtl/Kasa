@@ -5,9 +5,9 @@ export default function Footer() {
 		<footer>
 			<img
 				src={WhiteLogo}
-				alt=''
+				alt='Logo Kaza'
 			/>
-            <p>© 2020 Kasa. All rights reserved</p>
+			<p>© 2020 Kasa. All rights reserved</p>
 		</footer>
 	);
 }

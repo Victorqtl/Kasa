@@ -1,6 +1,10 @@
+@import './variables';
+@import './reset';
 @import './header';
 @import './footer';
-@import './variables';
+@import './homePage';
+@import './card';
+@import './banner';
 
 body {
     margin: 0 100px;

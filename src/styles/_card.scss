@@ -1,0 +1,28 @@
+@import './variables';
+
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 60px;
+	list-style-type: none;
+
+	li {
+		position: relative;
+
+		img {
+			width: 340px;
+			height: 340px;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+
+		p {
+			width: 240px;
+			color: white;
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+		}
+	}
+}
