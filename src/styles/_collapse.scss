@@ -1,0 +1,49 @@
+@import './variables';
+
+.collapse-container {
+	max-width: 1023px;
+	margin: 38px auto 79px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	.collapse-content {
+		.collapse-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+			border-radius: 5px;
+			background-color: $primary-color;
+			color: white;
+
+			button {
+				display: inline-flex;
+				border: none;
+				background: transparent;
+				cursor: pointer;
+
+				.arrow {
+					transition: transform 0.3s ease;
+				}
+
+				.rotateDown {
+					transform: rotate(180deg);
+				}
+
+				.rotateUp {
+					transform: rotate(0deg);
+				}
+			}
+		}
+
+		p {
+			margin-top: -5px;
+			padding: 20px;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			background-color: $grey-color;
+			font-weight: 200;
+		}
+	}
+}

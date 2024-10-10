@@ -1,7 +1,12 @@
+import AboutUsBanner from 'assets/about-us-bg.png';
+import Banner from '@/components/Banner';
+import Collapse from './components/Collapse';
+
 export default function AboutUs() {
 	return (
-		<div>
-			<h1>À propos</h1>
-		</div>
+		<>
+			<Banner imageUrl={AboutUsBanner} />
+			<Collapse />
+		</>
 	);
 }

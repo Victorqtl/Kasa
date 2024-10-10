@@ -1,8 +1,10 @@
 @import './variables';
+@import './banner';
+@import './card';
 
 .card-container {
     margin-top: 43px;
     padding: 50px;
     border-radius: 25px;
-    background-color: #F6F6F6;
+    background-color: $grey-color;
 }

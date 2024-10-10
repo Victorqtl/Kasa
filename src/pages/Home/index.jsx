@@ -1,6 +1,6 @@
 // import data from '@/data/logements.json'
 import Card from './components/Card';
-import Banner from '../../components/Banner';
+import Banner from '@/components/Banner';
 import HomeBanner from 'assets/home-bg.png';
 
 export default function HomePage() {
