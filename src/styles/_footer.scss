@@ -2,17 +2,17 @@
 
 footer {
 	height: 210px;
-	margin: 50px -100px 0;
+	margin: 0 -100px 0;
 	text-align: center;
 	background-color: black;
 	color: white;
 
 	img {
-		margin-top: 66px;
+		padding-top: 66px;
 	}
 
 	p {
 		font-size: $medium-font-size;
-		margin: 28px 0 0 0;
+		padding-top: 28px;
 	}
 }
