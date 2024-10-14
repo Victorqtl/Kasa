@@ -1,4 +1,4 @@
-import CollapseItem from './CollapseItem';
+import CollapseItem from '@/components/CollapseItem';
 
 export default function Collapse() {
 	return (

@@ -2,10 +2,30 @@
 
 .collapse-container {
 	max-width: 1023px;
-	margin: 38px auto 79px;
+	margin: 38px auto 85px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+
+&.collapse-container-2 {
+	flex-direction: row;
+	min-width: 100%;
+	gap: 75px;
+
+	.collapse-content {
+		width: 50%;
+
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.collapse-text ul {
+			list-style-type: none;
+			line-height: 140%;
+		}
+	}
+}
 
 	.collapse-content {
 		.collapse-title {
@@ -24,26 +44,32 @@
 				cursor: pointer;
 
 				.arrow {
-					transition: transform 0.3s ease;
-				}
-
-				.rotateDown {
-					transform: rotate(180deg);
-				}
-
-				.rotateUp {
-					transform: rotate(0deg);
+					transition: transform 0.2s ease;
 				}
 			}
 		}
 
-		p {
-			margin-top: -5px;
-			padding: 20px;
-			border-bottom-left-radius: 5px;
-			border-bottom-right-radius: 5px;
-			background-color: $grey-color;
-			font-weight: 200;
+		.collapse-details {
+			max-height: 0px;
+			overflow: hidden;
+			transition: max-height 0.2s ease-in-out;
+
+			p {				
+				padding: 20px;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				background-color: $grey-color;
+				font-weight: 200;
+			}
 		}
-	}
+
+		&.open {
+			.arrow {
+				transform: rotate(-180deg);
+			}
+			.collapse-details {
+				max-height: 200px;
+			}
+		}
+	}	
 }

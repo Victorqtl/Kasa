@@ -15,7 +15,10 @@ header {
 			font-size: $medium-font-size;
 			font-weight: 500;
 			color: black;
-			
+		
+		&.active {
+			text-decoration: underline;
+		}	
 		&:hover	{
 			text-decoration: underline;
 		}

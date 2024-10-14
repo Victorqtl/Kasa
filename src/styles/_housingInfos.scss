@@ -1,0 +1,66 @@
+@import './variables';
+
+.infos-container {
+	display: flex;
+	flex-direction: column;
+
+	.infos-header {
+		display: flex;
+		justify-content: space-between;
+
+		.left-content {
+			h1 {
+				color: $primary-color;
+				font-weight: 500;
+			}
+			.tags {
+				margin-top: 20px;
+				display: flex;
+				gap: 10px;
+
+				p {
+					padding: 6px;
+					min-width: 105px;
+					background-color: $primary-color;
+					color: white;
+					text-align: center;
+					font-size: $small-font-size;
+					font-weight: bold;
+					border-radius: 10px;
+				}
+			}
+		}
+		.right-content {
+            .host {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+
+                p {
+                    width: 80px;
+                    text-align: right;
+                    line-height: 140%;
+                    color: $primary-color;
+                }
+
+                img {
+                    width: 64px;;
+                    border-radius: 50%;
+                }
+            }
+            .rating {
+                display: flex;
+                justify-content: space-between;
+                gap: 4px;
+                margin-top: 20px;
+
+                svg {
+                    width: 28px;
+                    height: 28px;
+                    border: none;
+                }
+            }
+		}
+	}
+}

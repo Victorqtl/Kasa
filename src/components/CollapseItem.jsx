@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import arrow from 'assets/down-arrow.png';
+import arrow from 'assets/up-arrow.png';
 // import UpArrow from 'assets/up-arrow.png';
 
 export default function CollapseItem({title, content}) {
@@ -10,20 +10,20 @@ export default function CollapseItem({title, content}) {
 	}
 
 	return (
-		<div className='collapse-content'>
+		<div className={`collapse-content ${isOpen ? 'open' : ''}`}>
 			<div className='collapse-title'>
 				<h2>{title}</h2>
-				<button 
-                onClick={toggleCollapse}
-                >
+				<button onClick={toggleCollapse}>
 					<img
-						className={`arrow ${isOpen ? 'rotateUp' : 'rotateDown'}`}
+						className='arrow'
 						src={arrow}
 						alt='Flèche'
 					/>
 				</button>
 			</div>
-			{isOpen && <p className='collapse-text'>{content}</p>}
+			<div className='collapse-details'>
+				<p className='collapse-text'>{content}</p>
+			</div>
 		</div>
 	);
 }

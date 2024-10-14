@@ -16,6 +16,7 @@
 			position: relative;
 
 			img {
+				display: block;
 				width: 340px;
 				height: 340px;
 				object-fit: cover;
@@ -23,11 +24,29 @@
 			}
 
 			p {
-				width: 240px;
-				color: white;
 				position: absolute;
+				width: 240px;
 				left: 20px;
 				bottom: 20px;
+				color: white;
+				font-weight: bold;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(
+					to bottom,
+					rgba(0, 0, 0, 0) 0%,
+					rgba(0, 0, 0, 0) 42%,
+					rgba(0, 0, 0, 0.4) 100%,
+				);
+				border-radius: 10px;
+				pointer-events: none;
 			}
 		}
 	}
