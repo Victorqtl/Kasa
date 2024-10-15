@@ -31,7 +31,7 @@
 	}
 
 	.slide-enter {
-		animation: slideOpacity 0.4s ease-in-out;
+		animation: slideOpacity 0.4s ease-in;
 	}
 
 	@keyframes slideOpacity {
@@ -48,5 +48,17 @@
 		height: 415px;
 		object-fit: cover;
 		border-radius: 25px;
+	}
+}
+
+@media (max-width: 600px) {
+	.slideshow-container {
+		margin-top: 25px;
+		button {
+		img {
+			width: 20px;
+			height: 30px;
+		}
+	}
 	}
 }

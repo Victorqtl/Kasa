@@ -7,9 +7,16 @@
 @import './errorPage';
 @import './housing';
 
-
 body {
-    margin: 0 100px;
-    font-family: $primary-font;
-    font-size: $base-font-size;
+	margin: 0 100px;
+	font-family: $primary-font;
+	font-size: $base-font-size;
+
 }
+
+@media (max-width: 800px) {
+	body {
+		margin: 0 20px;
+	}
+}
+

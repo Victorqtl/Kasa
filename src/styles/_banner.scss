@@ -5,11 +5,11 @@
 	margin-top: 50px;
 
 	.image-container {
-		position: relative;		
+		position: relative;
 
 		img {
 			display: block;
-			width: 100%;			
+			width: 100%;
 			height: 223px;
 			object-fit: cover;
 			border-radius: 25px;
@@ -34,5 +34,32 @@
 		transform: translate(-50%, -50%);
 		font-size: $title-font-size;
 		color: white;
+	}
+}
+
+@media (max-width: 900px) {
+	.banner {
+		h1 {
+			font-size: 38px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.banner {
+		margin-top: 25px;
+		.image-container {
+			img {
+				height: 111px;
+			}
+		}
+		h1 {
+			width: 225px;
+			font-size: $medium-font-size;
+			left: 5%;
+			transform: translate(0%, -50%);
+		}
 	}
 }

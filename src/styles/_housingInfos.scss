@@ -16,6 +16,7 @@
 			.tags {
 				margin-top: 20px;
 				display: flex;
+				flex-wrap: wrap;
 				gap: 10px;
 
 				p {
@@ -61,6 +62,22 @@
                     border: none;
                 }
             }
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.infos-header {
+		flex-direction: column;
+	}
+
+	.right-content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 16px;
+
+		.host {
+			order: 2;
 		}
 	}
 }
