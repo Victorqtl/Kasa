@@ -21,9 +21,7 @@ export default function CollapseItem({title, content}) {
 					/>
 				</button>
 			</div>
-			<div className='collapse-details'>
-				<p className='collapse-text'>{content}</p>
-			</div>
+			<div className='collapse-details'>{content}</div>
 		</div>
 	);
 }

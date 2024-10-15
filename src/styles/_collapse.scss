@@ -2,7 +2,7 @@
 
 .collapse-container {
 	max-width: 1023px;
-	margin: 38px auto 85px;
+	margin: 38px auto 103px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -20,7 +20,7 @@
 			font-weight: bold;
 		}
 
-		.collapse-text ul {
+		.collapse-text li {
 			list-style-type: none;
 			line-height: 140%;
 		}
@@ -29,6 +29,8 @@
 
 	.collapse-content {
 		.collapse-title {
+			position: relative;
+			z-index: 10;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -50,16 +52,18 @@
 		}
 
 		.collapse-details {
+			margin-top: -5px;
 			max-height: 0px;
 			overflow: hidden;
 			transition: max-height 0.2s ease-in-out;
 
-			p {				
+			.collapse-text {				
 				padding: 20px;
 				border-bottom-left-radius: 5px;
 				border-bottom-right-radius: 5px;
 				background-color: $grey-color;
 				font-weight: 200;
+				line-height: 120%;
 			}
 		}
 

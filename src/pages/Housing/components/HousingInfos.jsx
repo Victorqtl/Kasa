@@ -10,8 +10,8 @@ export default function HousingInfos({housing}) {
 						<h1>{housing.title}</h1>
 						<p>{housing.location}</p>
 						<div className='tags'>
-							{housing.tags.map(tag => (
-								<p>{tag}</p>
+							{housing.tags.map((tag, index) => (
+								<p key={index}>{tag}</p>
 							))}
 						</div>
 					</div>

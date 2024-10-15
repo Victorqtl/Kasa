@@ -5,12 +5,12 @@ export default function Collapse({housing}) {
 		<div className='collapse-container collapse-container-2'>
 			<CollapseItem
 				title='Description'
-				content={housing.description}
+				content={<p className='collapse-text'> {housing.description} </p>}
 			/>
 			<CollapseItem
 				title='Équipements'
 				content={
-					<ul>
+					<ul className='collapse-text'>
 						{housing.equipments.map((equipment, index) => (
 							<li key={index}>{equipment}</li>
 						))}
