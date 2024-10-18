@@ -1,5 +1,5 @@
-import Header from './header';
-import Footer from './footer';
+import Header from './Header';
+import Footer from './Footer';
 import {NavLink} from 'react-router-dom';
 
 export default function ErrorPage() {
