@@ -1,9 +1,9 @@
-import {useState} from 'react';
+import { useState, useRef } from 'react';
 import arrow from 'assets/up-arrow.png';
-// import UpArrow from 'assets/up-arrow.png';
 
 export default function CollapseItem({title, content}) {
 	const [isOpen, setIsOpen] = useState(false);
+	const collapeDetails = useRef(null);
 
 	function toggleCollapse() {
 		setIsOpen(!isOpen);
@@ -21,7 +21,14 @@ export default function CollapseItem({title, content}) {
 					/>
 				</button>
 			</div>
-			<div className='collapse-details'>{content}</div>
+			<div
+				ref={collapeDetails}
+				className='collapse-details'
+				style={{
+					maxHeight: isOpen ? `${collapeDetails.current.scrollHeight}px` : '0px',
+				}}>
+				{content}
+			</div>
 		</div>
 	);
 }

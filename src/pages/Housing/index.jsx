@@ -1,26 +1,29 @@
 import {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import HousingInfos from './components/HousingInfos';
 import SlideShow from './components/SlideShow';
 
-
 export default function Apartment() {
 	const {id} = useParams();
+	const navigate = useNavigate();
+	const [housing, setHousing] = useState(null);
 
-	const [data, setData] = useState(null);
 	useEffect(() => {
 		async function fetchData() {
 			const response = await fetch('/data/housing.json');
 			const responseData = await response.json();
-			setData(responseData);
+			const currentHousing = responseData.find(housing => housing.id === id);
+			if (currentHousing) {
+				setHousing(currentHousing);
+			} else {
+				navigate('/404');
+			}
 		}
 		fetchData();
 	}, []);
-	if (!data) {
+	if (!housing) {
 		return <div>Loading...</div>;
 	}
-
-	const housing = data.find(housing => housing.id === id);
 
 	return (
 		<>
