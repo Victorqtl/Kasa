@@ -1,7 +1,7 @@
 @import './variables';
 
 .card-container {
-	margin: 43px 0 50px;
+	margin-top: 43px;
 	padding: 50px;
 	border-radius: 25px;
 	background-color: $grey-color;
@@ -43,7 +43,7 @@
 					to bottom,
 					rgba(0, 0, 0, 0) 0%,
 					rgba(0, 0, 0, 0) 42%,
-					rgba(0, 0, 0, 0.4) 100%,
+					rgba(0, 0, 0, 0.4) 100%
 				);
 				border-radius: 10px;
 				pointer-events: none;
@@ -54,6 +54,6 @@
 
 @media (max-width: 600px) {
 	.card-container {
-		margin: 25px 0 25px 0;
+		margin-top: 25px;
 	}
 }

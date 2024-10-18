@@ -7,18 +7,31 @@
 @import './errorPage';
 @import './housing';
 
+html, body, #root {
+	height: 100%;
+	margin: 0;
+}
 
-body {
+.app-container {
+	width: auto;
 	display: flex;
 	flex-direction: column;
 	margin: 0 100px 0;
+	min-height: 100%;
 	font-family: $primary-font;
 	font-size: $base-font-size;
 }
 
+.content {
+	flex: 1 0 auto;
+}
+
+footer {
+	flex-shrink: 0;
+}
 
 @media (max-width: 800px) {
-	body {
+	.app-container {
 		margin: 0 20px;
 	}
 }
