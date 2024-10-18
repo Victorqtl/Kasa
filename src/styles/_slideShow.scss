@@ -31,12 +31,12 @@
 	}
 
 	.slide-enter {
-		animation: slideOpacity 0.4s ease-in;
+		animation: slideOpacity 0.3s ease-in;
 	}
 
 	@keyframes slideOpacity {
 		from {
-			opacity: 70%;
+			opacity: 80%;
 		}
 		to {
 			opacity: 100%;
@@ -49,16 +49,25 @@
 		object-fit: cover;
 		border-radius: 25px;
 	}
+
+	p {
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		transform: translateX(-50%);
+		color: white;
+		font-size: $medium-font-size;
+	}
 }
 
 @media (max-width: 600px) {
 	.slideshow-container {
 		margin-top: 25px;
 		button {
-		img {
-			width: 20px;
-			height: 30px;
+			img {
+				width: 20px;
+				height: 30px;
+			}
 		}
-	}
 	}
 }

@@ -10,14 +10,14 @@ export default function SlideShow({housing}) {
 	const handlePrev = () => {
 		if (!isAnimating) {
 			setIsAnimating(true);
-			setCurrentIndex(prevIndex => (prevIndex - 1 + housingPictures.length) % housingPictures.length);
+			setCurrentIndex(index => (index - 1 + housingPictures.length) % housingPictures.length);
 		}
 	};
 
 	const handleNext = () => {
 		if (!isAnimating) {
 			setIsAnimating(true);
-			setCurrentIndex(prevIndex => (prevIndex + 1) % housingPictures.length);
+			setCurrentIndex(index => (index + 1) % housingPictures.length);
 		}
 	};
 
@@ -55,6 +55,7 @@ export default function SlideShow({housing}) {
 					src={housingPictures[currentIndex]}
 					alt='Photo du logement'
 				/>
+				{housingPictures.length > 1 && <p>{`${currentIndex + 1} / ${housingPictures.length}`}</p>}
 			</div>
 		</div>
 	);

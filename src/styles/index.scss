@@ -7,12 +7,15 @@
 @import './errorPage';
 @import './housing';
 
+
 body {
-	margin: 0 100px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 100px 0;
 	font-family: $primary-font;
 	font-size: $base-font-size;
-
 }
+
 
 @media (max-width: 800px) {
 	body {

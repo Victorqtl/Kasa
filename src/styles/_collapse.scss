@@ -2,7 +2,7 @@
 
 .collapse-container {
 	max-width: 1023px;
-	margin: 38px auto 103px;
+	margin: 38px auto 110px;
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
@@ -89,7 +89,6 @@
 }
 
 @media (max-width: 600px) {
-	
 	.collapse-container {
 		margin-bottom: 166px;
 	}
